@@ -116,4 +116,21 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+    
+    // Google Play Services Location - for FusedLocationProviderClient
+    implementation("com.google.android.gms:play-services-location:21.1.0")
+    
+    // Google Play Services Maps - for react-native-maps
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    
+    // Kotlin Coroutines for async operations
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    
+    // AndroidX Lifecycle for ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    
+    // AndroidX Core KTX
+    implementation("androidx.core:core-ktx:1.12.0")
 }

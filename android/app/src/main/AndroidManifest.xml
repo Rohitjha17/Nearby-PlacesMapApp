@@ -1,6 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Internet permission for network requests -->
     <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- Location permissions for fetching user's current location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    
+    <!-- Feature declaration for location (optional but recommended) -->
+    <uses-feature 
+        android:name="android.hardware.location.gps" 
+        android:required="false" />
+    <uses-feature 
+        android:name="android.hardware.location.network" 
+        android:required="false" />
 
     <application
       android:name=".MainApplication"
@@ -11,6 +24,13 @@
       android:theme="@style/AppTheme"
       android:usesCleartextTraffic="${usesCleartextTraffic}"
       android:supportsRtl="true">
+      
+      <!-- Google Maps API Key (required for react-native-maps) -->
+      <!-- Replace with your actual API key for production -->
+      <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="Enter-your-api-key-here"/>
+      
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
